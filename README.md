@@ -1,6 +1,6 @@
 # Flatfile API Postman Collection
 
-This repository contains a [Postman Collection](/collection.json) for the Flatfiles Platform.
+This repository contains a [Postman Collection](/collection.json) for the [Flatfile Platform](https://flatfile.com/).
 
 ## What is a Postman Collection?
 
