@@ -1,2 +1,0 @@
-# postman
-Public Postman collection
