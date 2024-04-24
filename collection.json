@@ -3577,7 +3577,7 @@
             "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"spaceId\": \"us_sp_YOUR_ID\",\n    \"environmentId\": \"us_env_YOUR_ID\",\n    \"mode\": \"import\",\n    \"actions\": [\n        {\n            \"operation\": \"submitAction\",\n            \"mode\": \"foreground\",\n            \"label\": \"Submit\",\n            \"description\": \"Submit data to webhook.site\",\n            \"primary\": true\n        }\n    ]\n}",
+              "raw": "{\n    \"spaceId\": \"us_sp_YOUR_ID\",\n    \"environmentId\": \"us_env_YOUR_ID\",\n    \"mode\": \"import\",\n    \"actions\": [\n        {\n            \"operation\": \"submitAction\",\n            \"mode\": \"foreground\",\n            \"label\": \"Submit\",\n            \"description\": \"Submit data to webhook.site\",\n            \"primary\": true\n        }\n    ],\n    \"origin\": \"filesystem\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -5693,7 +5693,7 @@
             "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"sheetId\": \"us_sh_YOUR_ID\",\n    \"mutateRecord\": \"example\",\n    \"mutationId\": \"example\",\n    \"snapshotLabel\": \"example\",\n    \"filter\": \"valid\",\n    \"filterField\": \"example\",\n    \"searchValue\": \"example\",\n    \"searchField\": \"example\",\n    \"q\": \"example\",\n    \"ids\": [\n        \"us_rc_YOUR_ID\"\n    ]\n}",
+              "raw": "{\n    \"sheetId\": \"us_sh_YOUR_ID\",\n    \"mutateRecord\": \"example\",\n    \"mutationId\": \"example\",\n    \"snapshotLabel\": \"example\",\n    \"snapshotId\": \"example\",\n    \"filter\": \"valid\",\n    \"filterField\": \"example\",\n    \"searchValue\": \"example\",\n    \"searchField\": \"example\",\n    \"q\": \"example\",\n    \"ids\": [\n        \"us_rc_YOUR_ID\"\n    ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -5854,7 +5854,15 @@
             "header": [],
             "method": "DELETE",
             "auth": null,
-            "body": null
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"environmentId\": \"us_env_YOUR_ID\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
           },
           "response": []
         },
@@ -6552,7 +6560,7 @@
                 "body": null
               },
               "description": null,
-              "body": "{\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": \"us_rc_YOUR_ID\",\n                \"values\": {\n                    \"firstName\": {\n                        \"value\": \"John\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"lastName\": {\n                        \"value\": \"Smith\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"email\": {\n                        \"value\": \"john.smith@example.com\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    }\n                },\n                \"valid\": true,\n                \"metadata\": {}\n            }\n        ],\n        \"counts\": {\n            \"valid\": 1000,\n            \"error\": 0,\n            \"total\": 1000\n        },\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"success\": true\n    }\n}",
+              "body": "{\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": \"us_rc_YOUR_ID\",\n                \"values\": {\n                    \"firstName\": {\n                        \"value\": \"John\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"lastName\": {\n                        \"value\": \"Smith\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"email\": {\n                        \"value\": \"john.smith@example.com\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    }\n                },\n                \"valid\": true,\n                \"metadata\": {},\n                \"config\": {}\n            }\n        ],\n        \"counts\": {\n            \"valid\": 1000,\n            \"error\": 0,\n            \"total\": 1000\n        },\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"success\": true\n    }\n}",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -6592,7 +6600,7 @@
             "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"id\": \"us_rc_YOUR_ID\",\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"values\": {\n            \"firstName\": {\n                \"value\": \"John\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"lastName\": {\n                \"value\": \"Smith\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"email\": {\n                \"value\": \"john.smith@example.com\",\n                \"messages\": [],\n                \"valid\": true\n            }\n        },\n        \"valid\": true,\n        \"metadata\": {}\n    }\n]",
+              "raw": "[\n    {\n        \"id\": \"us_rc_YOUR_ID\",\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"values\": {\n            \"firstName\": {\n                \"value\": \"John\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"lastName\": {\n                \"value\": \"Smith\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"email\": {\n                \"value\": \"john.smith@example.com\",\n                \"messages\": [],\n                \"valid\": true\n            }\n        },\n        \"valid\": true,\n        \"metadata\": {},\n        \"config\": {}\n    }\n]",
               "options": {
                 "raw": {
                   "language": "json"
@@ -6637,7 +6645,7 @@
                 "auth": null,
                 "body": {
                   "mode": "raw",
-                  "raw": "[\n    {\n        \"id\": \"us_rc_YOUR_ID\",\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"values\": {\n            \"firstName\": {\n                \"value\": \"John\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"lastName\": {\n                \"value\": \"Smith\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"email\": {\n                \"value\": \"john.smith@example.com\",\n                \"messages\": [],\n                \"valid\": true\n            }\n        },\n        \"valid\": true,\n        \"metadata\": {}\n    }\n]",
+                  "raw": "[\n    {\n        \"id\": \"us_rc_YOUR_ID\",\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"values\": {\n            \"firstName\": {\n                \"value\": \"John\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"lastName\": {\n                \"value\": \"Smith\",\n                \"messages\": [],\n                \"valid\": true\n            },\n            \"email\": {\n                \"value\": \"john.smith@example.com\",\n                \"messages\": [],\n                \"valid\": true\n            }\n        },\n        \"valid\": true,\n        \"metadata\": {},\n        \"config\": {}\n    }\n]",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -6740,7 +6748,7 @@
                 }
               },
               "description": null,
-              "body": "{\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": \"us_rc_YOUR_ID\",\n                \"values\": {\n                    \"firstName\": {\n                        \"value\": \"John\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"lastName\": {\n                        \"value\": \"Smith\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"email\": {\n                        \"value\": \"john.smith@example.com\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    }\n                },\n                \"valid\": true,\n                \"metadata\": {}\n            }\n        ],\n        \"counts\": {\n            \"valid\": 1000,\n            \"error\": 0,\n            \"total\": 1000\n        },\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"success\": true\n    }\n}",
+              "body": "{\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": \"us_rc_YOUR_ID\",\n                \"values\": {\n                    \"firstName\": {\n                        \"value\": \"John\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"lastName\": {\n                        \"value\": \"Smith\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    },\n                    \"email\": {\n                        \"value\": \"john.smith@example.com\",\n                        \"messages\": [],\n                        \"valid\": true,\n                        \"updatedAt\": \"2023-11-20T16:59:40.286Z\"\n                    }\n                },\n                \"valid\": true,\n                \"metadata\": {},\n                \"config\": {}\n            }\n        ],\n        \"counts\": {\n            \"valid\": 1000,\n            \"error\": 0,\n            \"total\": 1000\n        },\n        \"versionId\": \"us_vr_YOUR_ID\",\n        \"commitId\": \"us_vr_YOUR_ID\",\n        \"success\": true\n    }\n}",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -7922,7 +7930,7 @@
           "request": {
             "description": "Returns record cell values grouped by all fields in the sheet",
             "url": {
-              "raw": "{{baseUrl}}/sheets/:sheetId/cells?fieldKey=firstName&sortField=firstName&sortDirection=asc&filter=valid",
+              "raw": "{{baseUrl}}/sheets/:sheetId/cells?distinct=true&fieldKey=firstName&sortField=firstName&sortDirection=asc&filter=valid",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -7932,6 +7940,11 @@
                 "cells"
               ],
               "query": [
+                {
+                  "key": "distinct",
+                  "description": "Must be set to true",
+                  "value": "true"
+                },
                 {
                   "key": "fieldKey",
                   "description": null,
@@ -7980,7 +7993,7 @@
               "originalRequest": {
                 "description": "Returns record cell values grouped by all fields in the sheet",
                 "url": {
-                  "raw": "{{baseUrl}}/sheets/:sheetId/cells?fieldKey=firstName&sortField=firstName&sortDirection=asc&filter=valid",
+                  "raw": "{{baseUrl}}/sheets/:sheetId/cells?distinct=true&fieldKey=firstName&sortField=firstName&sortDirection=asc&filter=valid",
                   "host": [
                     "{{baseUrl}}"
                   ],
@@ -7990,6 +8003,11 @@
                     "cells"
                   ],
                   "query": [
+                    {
+                      "key": "distinct",
+                      "description": "Must be set to true",
+                      "value": "true"
+                    },
                     {
                       "key": "fieldKey",
                       "description": null,
@@ -9274,7 +9292,7 @@
                 }
               },
               "description": null,
-              "body": "{\n    \"data\": {\n        \"id\": \"us_usr_YOUR_ID\",\n        \"email\": \"john.smith@example.com\",\n        \"name\": \"john.smith\",\n        \"accountId\": \"us_acc_YOUR_ID\",\n        \"idp\": \"FRONTEGG\",\n        \"idpRef\": \"ab1cf38e-e617-4547-b37d-376a7ac9e554\",\n        \"metadata\": {},\n        \"createdAt\": \"2023-10-30T16:59:45.735Z\",\n        \"updatedAt\": \"2023-10-30T16:59:45.735Z\",\n        \"lastSeenAt\": \"2023-10-30T16:59:45.735Z\",\n        \"dashboard\": 2\n    }\n}",
+              "body": "{\n    \"data\": {\n        \"id\": \"us_usr_YOUR_ID\",\n        \"email\": \"john.smith@example.com\",\n        \"name\": \"john.smith\",\n        \"accountId\": \"us_acc_YOUR_ID\",\n        \"idp\": \"FRONTEGG\",\n        \"idpRef\": \"ab1cf38e-e617-4547-b37d-376a7ac9e554\",\n        \"metadata\": {},\n        \"createdAt\": \"2023-10-30T16:59:45.735Z\",\n        \"updatedAt\": \"2023-10-30T16:59:45.735Z\",\n        \"lastSeenAt\": \"2023-10-30T16:59:45.735Z\",\n        \"dashboard\": 2,\n        \"actorRoles\": [\n            {\n                \"id\": \"us_acr_YOUR_ID\",\n                \"roleId\": \"us_rol_YOUR_ID\",\n                \"actorId\": \"us_usr_YOUR_ID\",\n                \"resourceId\": \"us_acc_YOUR_ID\",\n                \"createdAt\": \"2021-01-01T00:00:00Z\",\n                \"updatedAt\": \"2021-01-01T00:00:00Z\"\n            },\n            {\n                \"id\": \"us_acr_YOUR_ID\",\n                \"roleId\": \"us_rol_YOUR_ID\",\n                \"actorId\": \"us_ag_YOUR_ID\",\n                \"resourceId\": \"us_env_YOUR_ID\",\n                \"createdAt\": \"2021-01-01T00:00:00Z\",\n                \"updatedAt\": \"2021-01-01T00:00:00Z\"\n            }\n        ]\n    }\n}",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -9392,6 +9410,36 @@
               "_postman_previewlanguage": "json"
             }
           ]
+        },
+        {
+          "_type": "endpoint",
+          "name": "Delete a user",
+          "request": {
+            "description": "Deletes a user",
+            "url": {
+              "raw": "{{baseUrl}}/users/:userId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                ":userId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "",
+                  "description": "The user id"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE",
+            "auth": null,
+            "body": null
+          },
+          "response": []
         },
         {
           "_type": "endpoint",
@@ -9581,6 +9629,409 @@
               },
               "description": null,
               "body": "{\n    \"data\": {\n        \"versionId\": \"us_vr_YOUR_ID\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_type": "container",
+      "description": null,
+      "name": "Views",
+      "item": [
+        {
+          "_type": "endpoint",
+          "name": "List views",
+          "request": {
+            "description": "Returns all views for user and sheet",
+            "url": {
+              "raw": "{{baseUrl}}/views?sheetId=us_sh_YOUR_ID",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "views"
+              ],
+              "query": [
+                {
+                  "key": "sheetId",
+                  "description": "The associated sheet ID of the view.",
+                  "value": "us_sh_YOUR_ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": null
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Returns all views for user and sheet",
+                "url": {
+                  "raw": "{{baseUrl}}/views?sheetId=us_sh_YOUR_ID",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "views"
+                  ],
+                  "query": [
+                    {
+                      "key": "sheetId",
+                      "description": "The associated sheet ID of the view.",
+                      "value": "us_sh_YOUR_ID"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "auth": null,
+                "body": null
+              },
+              "description": null,
+              "body": "{\n    \"data\": [\n        {\n            \"id\": \"us_vi_YOUR_ID\",\n            \"sheetId\": \"us_sh_YOUR_ID\",\n            \"name\": \"My View\",\n            \"config\": {\n                \"filter\": \"error\",\n                \"filterField\": \"email\",\n                \"q\": \"firstname like %John%\",\n                \"sortField\": \"email\",\n                \"sortDirection\": \"asc\"\n            }\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 3,\n        \"pageCount\": 50,\n        \"totalCount\": 100\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "_type": "endpoint",
+          "name": "Create a view",
+          "request": {
+            "description": "Add a new view to the space",
+            "url": {
+              "raw": "{{baseUrl}}/views",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "views"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sheetId\": \"us_sh_YOUR_ID\",\n    \"name\": \"My View\",\n    \"config\": {\n        \"filter\": \"error\",\n        \"filterField\": \"email\",\n        \"q\": \"firstname like %John%\",\n        \"sortField\": \"email\",\n        \"sortDirection\": \"asc\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Add a new view to the space",
+                "url": {
+                  "raw": "{{baseUrl}}/views",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "views"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "auth": null,
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"sheetId\": \"us_sh_YOUR_ID\",\n    \"name\": \"My View\",\n    \"config\": {\n        \"filter\": \"error\",\n        \"filterField\": \"email\",\n        \"q\": \"firstname like %John%\",\n        \"sortField\": \"email\",\n        \"sortDirection\": \"asc\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "description": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"us_vi_YOUR_ID\",\n        \"sheetId\": \"us_sh_YOUR_ID\",\n        \"name\": \"My View\",\n        \"config\": {\n            \"filter\": \"error\",\n            \"filterField\": \"email\",\n            \"q\": \"firstname like %John%\",\n            \"sortField\": \"email\",\n            \"sortDirection\": \"asc\"\n        }\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "_type": "endpoint",
+          "name": "Get a view",
+          "request": {
+            "description": "Returns a single view",
+            "url": {
+              "raw": "{{baseUrl}}/views/:viewId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "views",
+                ":viewId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "viewId",
+                  "description": "ID of view to return",
+                  "value": "us_vi_YOUR_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": null
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Returns a single view",
+                "url": {
+                  "raw": "{{baseUrl}}/views/:viewId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "views",
+                    ":viewId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "viewId",
+                      "description": "ID of view to return",
+                      "value": "us_vi_YOUR_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "auth": null,
+                "body": null
+              },
+              "description": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"us_vi_YOUR_ID\",\n        \"sheetId\": \"us_sh_YOUR_ID\",\n        \"name\": \"My View\",\n        \"config\": {\n            \"filter\": \"error\",\n            \"filterField\": \"email\",\n            \"q\": \"firstname like %John%\",\n            \"sortField\": \"email\",\n            \"sortDirection\": \"asc\"\n        }\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "_type": "endpoint",
+          "name": "Update a view",
+          "request": {
+            "description": "Updates a single view",
+            "url": {
+              "raw": "{{baseUrl}}/views/:viewId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "views",
+                ":viewId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "viewId",
+                  "description": "ID of view to update",
+                  "value": "us_vi_YOUR_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"My View\",\n    \"config\": {\n        \"filter\": \"error\",\n        \"filterField\": \"email\",\n        \"q\": \"firstname like %John%\",\n        \"sortField\": \"email\",\n        \"sortDirection\": \"asc\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Updates a single view",
+                "url": {
+                  "raw": "{{baseUrl}}/views/:viewId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "views",
+                    ":viewId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "viewId",
+                      "description": "ID of view to update",
+                      "value": "us_vi_YOUR_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "auth": null,
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"My View\",\n    \"config\": {\n        \"filter\": \"error\",\n        \"filterField\": \"email\",\n        \"q\": \"firstname like %John%\",\n        \"sortField\": \"email\",\n        \"sortDirection\": \"asc\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "description": null,
+              "body": "{\n    \"data\": {\n        \"id\": \"us_vi_YOUR_ID\",\n        \"sheetId\": \"us_sh_YOUR_ID\",\n        \"name\": \"My View\",\n        \"config\": {\n            \"filter\": \"error\",\n            \"filterField\": \"email\",\n            \"q\": \"firstname like %John%\",\n            \"sortField\": \"email\",\n            \"sortDirection\": \"asc\"\n        }\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "_type": "endpoint",
+          "name": "Delete a view",
+          "request": {
+            "description": "Deletes a single view",
+            "url": {
+              "raw": "{{baseUrl}}/views/:viewId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "views",
+                ":viewId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "viewId",
+                  "description": "ID of view to delete",
+                  "value": "us_vi_YOUR_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": null
+          },
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Deletes a single view",
+                "url": {
+                  "raw": "{{baseUrl}}/views/:viewId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "views",
+                    ":viewId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "viewId",
+                      "description": "ID of view to delete",
+                      "value": "us_vi_YOUR_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "auth": null,
+                "body": null
+              },
+              "description": null,
+              "body": "{\n    \"data\": {\n        \"success\": true\n    }\n}",
               "_postman_previewlanguage": "json"
             }
           ]
